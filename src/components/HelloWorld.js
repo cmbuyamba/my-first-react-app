@@ -22,6 +22,6 @@ const config = {
 
 axios.post("https://146.148.10.8/api/v5", data, config).then(response => console.log(response.data));
 
-const HelloWorld = (props) =>  ['Celestin'].map((input) => <Card title={input} content="Bla bla bla bla" />);
+const HelloWorld = (props) =>  ['Celestin'].map((input) => <Card title={input} content="Hello World!" />);
 
 export default HelloWorld;
