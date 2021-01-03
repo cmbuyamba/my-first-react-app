@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import logo from '../assets/wzy-logo.png'
+import logo from '../assets/wyz-logo.png'
 
 const data = {
 	"merchant_id" : "jwHfjdopenc3yt$Tb",
