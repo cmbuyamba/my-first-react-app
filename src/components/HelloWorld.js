@@ -22,6 +22,8 @@ const config = {
 
 axios.post("https://146.148.10.8/api/v5", data, config).then(response => console.log(response.data));
 
-const HelloWorld = (props) =>  <img src={logo} alt=" "></img>;
+const HelloWorld = (props) =>  <div style={{width: "60%", margin: "auto"}}>
+		<img style={{width: '100%'}} src={logo} alt=" "></img>
+	</div>;
 
 export default HelloWorld;
