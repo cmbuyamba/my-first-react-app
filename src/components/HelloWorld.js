@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import Card from './Card'
+import logo from '../assets/wzy-logo.png'
 
 const data = {
 	"merchant_id" : "jwHfjdopenc3yt$Tb",
@@ -22,6 +22,6 @@ const config = {
 
 axios.post("https://146.148.10.8/api/v5", data, config).then(response => console.log(response.data));
 
-const HelloWorld = (props) =>  <h1>Welcome on BILEYI!</h1>;
+const HelloWorld = (props) =>  <img src={logo} alt=" "></img>;
 
 export default HelloWorld;
