@@ -22,7 +22,7 @@ const makutaUser = {
 }
 
 const makutaConfig = {
-	headears: {
+	headers: {
 		'Content-Type': 'application/json',
 		'App-Token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJtYWt1dGEiOnsiZGF0YSI6eyJjb250ZW50cyI6WyJXWVpURUNLIl19fX0.QxXYCTgY579pZTWVDhrtT5R3euRBpzLBZUnzZ1HNFU0EC4M0J2EoYKl_mARWD77EJza1bpudu0o4HSskJ40jk-FdpCqi2EVU53ltdHZIcS60kDIRmTjmOoUibsn4dShu_e-9hdjdCk2H4a2oshjesbnYFBQU0Ev6MQ5WpCllMh6QYbZ7lwSrA1w_d7jcIlfjm1u7EjLi7DmpCWdw4lAP6utoY594vRB7hX3j30eAVnncaRUy4LM3R_kdGjgxqTeHsywHg2TfGDGfm3B8K1HoC8jM2qxjusEANud7mcz6PldMjP6kwfL7POz8xHi3rSr8s_iJuXqVQFAsNcONoEnPnQ'	
 	}
