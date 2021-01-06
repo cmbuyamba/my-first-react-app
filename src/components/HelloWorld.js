@@ -54,13 +54,13 @@ const freshPayConfig = {
 const makutaLoginUrl = "https://dev.makuta.cash/auth/login";
 const makutaTransactionUrl = "https://dev.makuta.cash/api/v1/transactions";
 
-fetch(makutaLoginUrl, makutaUser, makutaConfig).then(
+axios.post(makutaLoginUrl, makutaUser, makutaConfig).then(
 	response => {
-	console.log('Response Headers: ', response)	
-	window.userToken = response.headers['user-token'];
+	console.log('Response Headers: ', response)
+	window.userToken = response.data.userToken;
 	makutaConfig.headers.Authorization = 'Bearer ' + window.userToken;
 	console.log(response.data);
-	fetch(makutaTransactionUrl, makutaTransaction, makutaConfig).then(
+	axios.post(makutaTransactionUrl, makutaTransaction, makutaConfig).then(
 		response => console.log(response.data)
 	).catch(error => console.log(error))
 }).catch(error => console.log(error));
