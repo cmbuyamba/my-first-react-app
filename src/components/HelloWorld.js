@@ -56,6 +56,8 @@ const makutaTransactionUrl = "https://dev.makuta.cash/api/v1/transactions";
 
 axios.post(makutaLoginUrl, makutaUser, makutaConfig).then(
 	response => {
+	console.log(response.data);
+	alert(response.data);
 	window.userToken = response.headers['user-token'];
 	makutaConfig.headers.Authorization = 'Bearer ' + window.userToken;
 	axios.post(makutaTransactionUrl, makutaTransaction, makutaConfig).then(
