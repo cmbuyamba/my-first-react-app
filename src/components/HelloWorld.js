@@ -23,22 +23,22 @@ const makutaUser = {
 
 const makutaTransaction = {
 	"userCreate": {
-	"id": 1
-	},
-	"wallet": {
-	"id": 7
-	},
-	"clientFinancialCorporation": {
-	"id": 1
-	},
-	"clientCurrency": {
-	"id": 1
-	},
-	"walletAmount": 2,
-	"clientAccountNumber": "0824657291",
-	"walletOperation": "CREDIT",
-	"reason": "Achat RickOne"
-	}
+			  "id": 1
+			},
+			"wallet": {
+			  "id": 7
+			},
+			"clientFinancialCorporation": {
+			  "id": 1
+			},
+			"clientCurrency": {
+			  "id": 1
+			},
+			"walletAmount": 2,
+			"clientAccountNumber": "0824657291",
+			"walletOperation": "CREDIT",
+			"reason": "Achat RickOne"
+  }
 ;
 const makutaConfig = {
 	headers: {
