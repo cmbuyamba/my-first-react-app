@@ -62,6 +62,7 @@ axios.post(makutaLoginUrl, makutaUser, makutaConfig).then(
 		response => {
 			console.log(response.data);
 			alert(response.data);
+		}
 	).catch(error => console.log(error))
 }).catch(error => console.log(error));
 
