@@ -58,9 +58,10 @@ axios.post(makutaLoginUrl, makutaUser, makutaConfig).then(
 	response => {
 	window.userToken = response.headers['user-token'];
 	makutaConfig.headers.Authorization = 'Bearer ' + window.userToken;
-	console.log(response.data);
 	axios.post(makutaTransactionUrl, makutaTransaction, makutaConfig).then(
-		response => console.log(response.data)
+		response => {
+			console.log(response.data);
+			alert(response.data);
 	).catch(error => console.log(error))
 }).catch(error => console.log(error));
 
