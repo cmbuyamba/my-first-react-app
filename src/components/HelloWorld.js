@@ -51,7 +51,7 @@ import axios from 'axios'
 	
  	return <div role="main" style={{width: "40%", margin: "auto"}}>
 	 	<h1 style={{fontFamily: 'FANTASY', textAlign: 'center'}}>Welcome on BILEYI!</h1>
- 		<img style={{width: '100%'}} src='../assets/wyz-logo.png' alt=" "></img>
+ 		<img style={{width: '100%'}} src='../assets/wyz-logo.png' alt="Logo"></img>
  	</div>};
 
  export default HelloWorld;
