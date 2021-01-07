@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelloWorld should render 1`] = `
+<div>
+  <div
+    role="main"
+    style="width: 40%; margin: auto;"
+  >
+    <h1
+      style="font-family: FANTASY; text-align: center;"
+    >
+      Welcome on BILEYI!
+    </h1>
+    <img
+      alt=" "
+      src="../assets/wyz-logo.png"
+      style="width: 100%;"
+    />
+  </div>
+</div>
+`;
