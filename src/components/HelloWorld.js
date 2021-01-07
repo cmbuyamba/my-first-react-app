@@ -1,6 +1,6 @@
-import React from 'react'
-import axios from 'axios'
-import logo from '../assets/wyz-logo.png'
+// import React from 'react'
+const axios = require('axios')
+const logo = '../assets/wyz-logo.png'
 
 const freshPayData = {
 	"merchant_id" : "jwHfjdopenc3yt$Tb",
@@ -57,21 +57,18 @@ const makutaTransactionUrl = "https://dev.makuta.cash/api/v1/transactions";
 axios.post(makutaLoginUrl, makutaUser, makutaConfig).then(
 	response => {
 	console.log(response.data);
-	alert(response.data);
-	window.userToken = response.headers['user-token'];
-	makutaConfig.headers.Authorization = 'Bearer ' + window.userToken;
+	makutaConfig.headers.Authorization = 'Bearer ' + response.headers['user-token'];
 	axios.post(makutaTransactionUrl, makutaTransaction, makutaConfig).then(
 		response => {
 			console.log(response.data);
-			alert(response.data);
 		}
 	).catch(error => console.log(error))
 }).catch(error => console.log(error));
 
 //axios.post("https://146.148.10.8/api/v5", freshPayData, freshPayConfig).then(response => console.log(response.data));
 
-const HelloWorld = (props) =>  <div style={{width: "40%", margin: "auto"}}>
-		<img style={{width: '100%'}} src={logo} alt=" "></img>
-	</div>;
+// const HelloWorld = (props) =>  <div style={{width: "40%", margin: "auto"}}>
+// 		<img style={{width: '100%'}} src={logo} alt=" "></img>
+// 	</div>;
 
-export default HelloWorld;
+// export default HelloWorld;
