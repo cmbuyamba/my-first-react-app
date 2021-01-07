@@ -68,7 +68,7 @@ axios.post(makutaLoginUrl, makutaUser, makutaConfig).then(
 //axios.post("https://146.148.10.8/api/v5", freshPayData, freshPayConfig).then(response => console.log(response.data));
 
  const HelloWorld = (props) =>  <div role="main" style={{width: "40%", margin: "auto"}}>
-	 	<h1>Welcome on BILEYI!</h1>
+	 	<h1 style={{fontFamily: 'FANTASY', textAlign: 'center'}}>Welcome on BILEYI!</h1>
  		<img style={{width: '100%'}} src={logo} alt=" "></img>
  	</div>;
 
