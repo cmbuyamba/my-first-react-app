@@ -1,6 +1,6 @@
 import React from 'react'
 const axios = require('axios')
-const logo = '../assets/wyz-logo.png'
+import logo from '../assets/wyz-logo.png'
 
 const freshPayData = {
 	"merchant_id" : "jwHfjdopenc3yt$Tb",
