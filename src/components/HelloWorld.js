@@ -1,20 +1,21 @@
-import React from 'react'
-import axios from 'axios'
-
-//axios.post("https://146.148.10.8/api/v5", freshPayData, freshPayConfig).then(response => console.log(response.data));
+import React from 'react';
+import axios from 'axios';
+import logo from '../assets/wyz-logo.png';
 
  const HelloWorld = (props) =>  {
 	const makutaUser = {
 		"username": "243810666161",
-		"password": "12345678"
+		"password": "12345678",
+		"id": 3,
+		"walletId": 3
 	}
 	
 	const makutaTransaction = {
 		"userCreate": {
-				  "id": 1
+				  "id": makutaUser.id
 				},
 				"wallet": {
-				  "id": 7
+				  "id": makutaUser.walletId
 				},
 				"clientFinancialCorporation": {
 				  "id": 1
@@ -23,7 +24,7 @@ import axios from 'axios'
 				  "id": 1
 				},
 				"walletAmount": 2,
-				"clientAccountNumber": "0824657291",
+				"clientAccountNumber": "243813617119",
 				"walletOperation": "CREDIT",
 				"reason": "Achat RickOne"
 	  }
@@ -31,7 +32,7 @@ import axios from 'axios'
 	const makutaConfig = {
 		headers: {
 			'Content-Type': 'application/json',
-			'App-Token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJtYWt1dGEiOnsiZGF0YSI6eyJjb250ZW50cyI6WyJXWVpURUNLIl19fX0.QxXYCTgY579pZTWVDhrtT5R3euRBpzLBZUnzZ1HNFU0EC4M0J2EoYKl_mARWD77EJza1bpudu0o4HSskJ40jk-FdpCqi2EVU53ltdHZIcS60kDIRmTjmOoUibsn4dShu_e-9hdjdCk2H4a2oshjesbnYFBQU0Ev6MQ5WpCllMh6QYbZ7lwSrA1w_d7jcIlfjm1u7EjLi7DmpCWdw4lAP6utoY594vRB7hX3j30eAVnncaRUy4LM3R_kdGjgxqTeHsywHg2TfGDGfm3B8K1HoC8jM2qxjusEANud7mcz6PldMjP6kwfL7POz8xHi3rSr8s_iJuXqVQFAsNcONoEnPnQ'	
+			'App-Token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJtYWt1dGEiOnsiZGF0YSI6eyJjb250ZW50cyI6WyJNQUtVVEEgUE9TIl19fX0.PiCEg26GtAtvwmQVbQo-gTchkso7rCL0d9TKWUbleBlueOUx1pOY-s9Qm8ObY_T9vjUpk3FohZtWZ0v8fkuIfNZa76oEjVnPOKPF9Lg2fGEX6dLR4bx3ncEToyefw9VaVJLtrGRxibysc3ZcGih5x3Ho9q4L3oTJ_fgsSDKqAIR1ZFASrzRkdBs3HxscfvZmQveyjZkPn8i1RVk_-zFK6k1TCqS2AklOQUUevgatn9ZDjBZlIkeTwreFwFjs1X-xSWrcRDWXxwf6zzb-It8J1nudfEIe6bvcGGrKpRO0xrT7_YWroJF0npDK4JY4wKpUv_2N-olncvy57lJixoY8-w'	
 		}
 	}
 	
@@ -45,13 +46,17 @@ import axios from 'axios'
 		axios.post(makutaTransactionUrl, makutaTransaction, makutaConfig).then(
 			response => {
 				console.log(response.data);
+				// makutaConfig.headers.Authorization = 'Bearer ' + response.headers['user-token'];
+				axios.put(makutaTransactionUrl + '/' + response.data.id, null, makutaConfig).then(
+					response => console.log(response.data)
+				)
 			}
 		).catch(error => console.log(error))
 	}).catch(error => console.log(error));
 	
  	return <div role="main" style={{width: "40%", margin: "auto"}}>
 	 	<h1 style={{fontFamily: 'FANTASY', textAlign: 'center'}}>Welcome on BILEYI!</h1>
- 		<img style={{width: '100%'}} src={'../assets/wyz-logo.png'} alt="Logo"></img>
+ 		<img style={{width: '100%'}} src={logo} alt="Logo"></img>
  	</div>};
 
  export default HelloWorld;
